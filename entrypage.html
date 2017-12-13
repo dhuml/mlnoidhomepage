@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>MeloNoid</title>
+	<title>Melonoid</title>
 	<style>
 		*{
 			margin:0;
@@ -18,6 +18,11 @@
 			height:100%;
 			box-sizing:border-box;
 			border:2px solid green;
+		}
+
+		a{
+			text-decoration: none;
+			color:black;
 		}
 
 		#container {
@@ -72,6 +77,15 @@
 			transform: translateX(20px);
 		}
 
+		#noid:hover {
+			cursor:pointer;
+		}
+
+		#noid {
+			transition: 0.8s ease-out;
+
+		}
+
 	</style>
 </head>
 <body>
@@ -80,20 +94,24 @@
 			<p id="noid"><span id="dot1">.</span>NOID<span id="dot2">.</span>
 			</p>
 
-			<span id="mlndbeats"> MeloNoid  Beats</span>
+			<span id="mlndbeats"> Melonoid  Beats</span>
 		</div>
 		
 
 	</div>
 	
 	<script>
-		var dots = document.getElementsByClassName("dot");
-		var cont = document.getElementById("content")
-		cont.addEventListener("hover", move);
+		var noid = document.getElementById("noid");
+		noid.addEventListener("click", rotate, false  );
 
-		function.move() {
-			dots.transitions = 
+		function rotate() {
+			noid.style.transform = "rotateX(180deg)";
+			setTimeout(function() {
+				window.location.href = "homepage.html"
+			}, 700);
+
 		}
+
 	</script>
 
 </body>

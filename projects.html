@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MeloNoid</title>
+	<link rel="stylesheet" type="text/css" href="homepagestyle.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<a href="homepage.html"><div id="noid">
+			<span id="dot1">.</span ><span id="noidnoid">NOID</span><span id="dot2">.</span>
+		</div></a>
+
+		<nav>
+			<ul>
+				<a href="beats.html"><li>Beats</li></a>
+				<a href="projects.html"><li>Projekte</li></a>
+				<li>Contact</li>
+			</ul>
+		</nav>
+	</header>
+
+
+
+
+	<div id="container">
+		<div class="project">
+				<iframe class="projiframe" style="border: 0; width: 100%; height: 472px;" src="https://bandcamp.com/EmbeddedPlayer/album=904498433/size=large/bgcol=333333/linkcol=63b2cc/artwork=small/transparent=true/" seamless><a href="http://hunneypimp.bandcamp.com/album/schmetterlinge">Schmetterlinge by Hunney Pimp</a></iframe>
+				<div class="projectdescription">
+					<h2>Hunney Pimp - Schmetterlinge</h2>
+					<p><span class="fett">Recording, Mixing und Mastering</span></p>
+					<p><span class="fett">Produktion aller Instrumentale</span><br> <span>bis auf:</span></p>
+					<p class="prodby">"02 - 24 Stund, prod. p.E.&Sycho gast",</p>
+					<p class="prodby">"11 - Schau wie schee, prod. Buskapé" und</p>
+					<p class="prodby">"09 - Einfach na, prod. Hunney Pimp"</p> 
+					<p>"08 - Wonn is amoi Heid" und "12 - Schmetterlinge" <span class="fett">produziert mit Hunney Pimp.</span></p>
+					<p>"06 - Jeannie in a bottle" <span class="fett">produziert mit Mr. Käfer.</span></p>
+				</div>
+
+		</div>
+
+		<div class="project">
+				<iframe class="projiframe" style="border: 0; width: 100%; height: 409px;" src="https://bandcamp.com/EmbeddedPlayer/album=1765129536/size=large/bgcol=333333/linkcol=4ec5ec/artwork=small/transparent=true/" seamless><a href="http://hunneypimp.bandcamp.com/album/zum-mond">Zum Mond by Hunney Pimp</a></iframe>
+
+				<div class="projectdescription">
+					<h2>Hunney Pimp - Zum Mond</h2>
+					<p><span class="fett">Recording, Mixing und Mastering</span></p>
+					
+				</div>
+
+		</div>
+
+		<div class="project">
+				<iframe class="projiframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/191388958&amp;color=%233b3b3b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+				<div class="projectdescription">
+					<h2>Aloof Slangin und Melonoid - Munchies Tape</h2>
+					<p><span class="fett">Produktion, Mixing und Mastering mit Aloof Slangin</span></p>
+					
+				</div>
+		</div>
+
+		<div class="project">
+				<iframe class="projiframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/209970876&amp;color=%233b3b3b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+				<div class="projectdescription">
+					<h2>Cuturix - The Cosmic Bypass Beattape</h2>
+					<p><span class="fett">Produktion, Mixing und Mastering</span></p>
+					
+				</div>
+		</div>
+
+	</div>
+
+	<div id="socialmedia">
+		<a href="#" id="facebook" class="fa fa-facebook"></a>
+		<a href="#" id="soundcloud" class="fa fa-soundcloud"></a>
+		<a href="#" id="instagram" class="fa fa-instagram"></a>
+	</div>
+	
+	
+	<script>
+		var noid = document.getElementById("noid");
+		var noidnoid = document.getElementById("noidnoid");
+		noid.addEventListener("mouseover", rotate2);
+		noid.addEventListener("mouseout", changename);
+
+		function rotate2() {
+			noidnoid.style.transform = "rotateX(360deg)";
+			noidnoid.style.transition = "0.5s";
+			noidnoid.innerText = "MELO";
+		}
+		function changename() {
+			noidnoid.style.transform = null;
+			noidnoid.style.transition = null;
+			noidnoid.innerText = "NOID";
+		}
+
+	</script>
+
+</body>
+</html>
