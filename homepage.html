@@ -46,12 +46,12 @@
 <body>
 	<header>
 		<!-- <div id="head_div"> -->
-			<div id="noid"><a id="noidlink" href="homepage.html">
+			<a id="noidlink" href="homepage.html"><div id="noid">
 				<span id="dot1">.</span ><span id="noidnoid">NOID</span><span id="dot2">.</span>
-			</a></div>
-			<div id="noidresponsive"><a id="respnoidlink" href="#">
+			</div></a>
+			<a id="respnoidlink" href="#"><div id="noidresponsive">
 				<span id="dot1">.</span ><span id="respnoidnoid">NOID</span><span id="dot2">.</span>
-			</a></div>
+			</div></a>
 
 				<!-- <a id="menubtn" href="#">Menu</a> -->
 			<nav class="topnav" id="navbar">
@@ -91,7 +91,7 @@
 
 	<script>
 		var noid = document.getElementById("noid");
-		var respNoid = document.getElementById("noidresponsive")
+		var respNoid = document.getElementById("noidresponsive");
 		var noidnoid = document.getElementById("noidnoid");
 		var respnoidnoid = document.getElementById("respnoidnoid");
 		
@@ -105,6 +105,7 @@
 			noidnoid.style.transform = "rotateX(360deg)";
 			noidnoid.style.transition = "0.5s";
 			noidnoid.innerText = "MELO";
+			
 			respnoidnoid.style.transform = "rotateX(360deg)";
 			respnoidnoid.style.transition = "0.5s";
 			respnoidnoid.innerText = "MELO";
@@ -114,6 +115,7 @@
 			noidnoid.style.transform = null;
 			noidnoid.style.transition = null;
 			noidnoid.innerText = "NOID";
+			
 			respnoidnoid.style.transform = null;
 			respnoidnoid.style.transition = null;
 			respnoidnoid.innerText = "NOID";

@@ -10,12 +10,12 @@
 <body>
 	<header>
 		<!-- <div id="head_div"> -->
-			<div id="noid"><a id="noidlink" href="homepage.html">
+			<a id="noidlink" href="homepage.html"><div id="noid">
 				<span id="dot1">.</span ><span id="noidnoid">NOID</span><span id="dot2">.</span>
-			</a></div>
-			<div id="noidresponsive"><a id="respnoidlink" href="#">
+			</div></a>
+			<a id="respnoidlink" href="#"><div id="noidresponsive">
 				<span id="dot1">.</span ><span id="respnoidnoid">NOID</span><span id="dot2">.</span>
-			</a></div>
+			</div></a>
 
 				<!-- <a id="menubtn" href="#">Menu</a> -->
 			<nav class="topnav" id="navbar">
@@ -40,7 +40,7 @@
 		<!-- 	<iframe class="projiframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/191388958&amp;color=%233b3b3b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
 
 
-			<iframe width="100%" height="850px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/147223802&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+			<iframe width="100%"" height="850px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/147223802&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true"></iframe>
 
 		</div>
 	</div>
@@ -54,20 +54,25 @@
 	
 <script>
 		var noid = document.getElementById("noid");
-		var respNoid = document.getElementById("noidresponsive")
 		var noidnoid = document.getElementById("noidnoid");
-		var respnoidnoid = document.getElementById("respnoidnoid");
-		
-
 		noid.addEventListener("mouseover", rotate2);
 		noid.addEventListener("mouseout", changename);
+		
+
+		var respNoid = document.getElementById("noidresponsive")
+		var respnoidnoid = document.getElementById("respnoidnoid");
 		respNoid.addEventListener("mouseover", rotate2);
 		respNoid.addEventListener("mouseout", changename);
+		
+
+		
+
 
 		function rotate2() {
 			noidnoid.style.transform = "rotateX(360deg)";
 			noidnoid.style.transition = "0.5s";
 			noidnoid.innerText = "MELO";
+			
 			respnoidnoid.style.transform = "rotateX(360deg)";
 			respnoidnoid.style.transition = "0.5s";
 			respnoidnoid.innerText = "MELO";
@@ -77,6 +82,7 @@
 			noidnoid.style.transform = null;
 			noidnoid.style.transition = null;
 			noidnoid.innerText = "NOID";
+			
 			respnoidnoid.style.transform = null;
 			respnoidnoid.style.transition = null;
 			respnoidnoid.innerText = "NOID";
