@@ -2,52 +2,165 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MeloNoid</title>
 	<link rel="stylesheet" type="text/css" href="homepagestyle.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		.slidercontent {
+			align-self: center;
+			margin:50px 0 50px 0;
+			width:90%;
+			height:90%;
+			border: 5px dotted black;
+			border-radius: 50%;
+			box-sizing: border-box;
+			display:flex;
+			justify-content: space-around;
+
+		}
+
+		.slidercontent img {
+			border-radius: 50%;
+			width:70%;
+			height:70%;
+		}
+
+		.hidepic {
+			display:none;
+		}
+
+		#sldbtn {
+			
+			height:70px;
+			width:70px;
+			border:0;
+			border-radius: 50%
+		}
+		#sldbtn:active {
+			background-color: grey;
+		}
+	</style>
 </head>
 <body>
 	<header>
-		<a href="homepage.html"><div id="noid">
-			<span id="dot1">.</span ><span id="noidnoid">NOID</span><span id="dot2">.</span>
-		</div></a>
+		<!-- <div id="head_div"> -->
+			<div id="noid"><a id="noidlink" href="homepage.html">
+				<span id="dot1">.</span ><span id="noidnoid">NOID</span><span id="dot2">.</span>
+			</a></div>
+			<div id="noidresponsive"><a id="respnoidlink" href="#">
+				<span id="dot1">.</span ><span id="respnoidnoid">NOID</span><span id="dot2">.</span>
+			</a></div>
 
-		<nav>
-			<ul>
-				<a href="beats.html"><li>Beats</li></a>
-				<a href="projects.html"><li>Projekte</li></a>
-				<li>Contact</li>
-			</ul>
-		</nav>
+				<!-- <a id="menubtn" href="#">Menu</a> -->
+			<nav class="topnav" id="navbar">
+				<a class="navlink" href="homepage.html">Home</a>
+				<a class="navlink" href="beats.html">Beats</a>
+				<a class="navlink" href="projects.html">Projekte</a>
+				<a class="navlink" href="#">Contact</a>
+			</nav>
+		<!-- </div> -->
 	</header>
+
 
 	<div id="container">
 		<div id="content">
-		</div>		
+			<div class="slidercontent" id="sldpc1">
+				<img  src="sliderpics\slider_pc1.jpg" alt="sliderpic1">
+			</div>
+			
+			
+
+			<div class="slidercontent hidepic" id="sldpc2">
+				<img  src="sliderpics\slider_pc2.jpg" alt="sliderpic2">
+			</div>
+			<div class="slidercontent hidepic" id="sldpc3" >
+				<img src="sliderpics\slider_pc3.jpg" alt="sliderpic3">
+			</div>
+
+		</div>
+		<button id="sldbtn">next pic</button>		
 	</div>
 	
 	<div id="socialmedia">
 		<a href="#" id="facebook" class="fa fa-facebook"></a>
 		<a href="#" id="soundcloud" class="fa fa-soundcloud"></a>
-		<a href="#" id="instagram" class="fa fa-instagram"></a>
+		<a href="" id="instagram" class="fa fa-instagram"></a>
 	</div>
+
 	<script>
 		var noid = document.getElementById("noid");
+		var respNoid = document.getElementById("noidresponsive")
 		var noidnoid = document.getElementById("noidnoid");
+		var respnoidnoid = document.getElementById("respnoidnoid");
+		
+
 		noid.addEventListener("mouseover", rotate2);
 		noid.addEventListener("mouseout", changename);
+		respNoid.addEventListener("mouseover", rotate2);
+		respNoid.addEventListener("mouseout", changename);
 
 		function rotate2() {
 			noidnoid.style.transform = "rotateX(360deg)";
 			noidnoid.style.transition = "0.5s";
 			noidnoid.innerText = "MELO";
+			respnoidnoid.style.transform = "rotateX(360deg)";
+			respnoidnoid.style.transition = "0.5s";
+			respnoidnoid.innerText = "MELO";
 		}
+
 		function changename() {
 			noidnoid.style.transform = null;
 			noidnoid.style.transition = null;
 			noidnoid.innerText = "NOID";
+			respnoidnoid.style.transform = null;
+			respnoidnoid.style.transition = null;
+			respnoidnoid.innerText = "NOID";
 		}
 
+		var noidlink = document.getElementById("noidlink");
+		var respnoidlink = document.getElementById("respnoidlink");
+
+		noid.addEventListener('click', menuchange, true);
+		respNoid.addEventListener('click', menuchange, true);
+
+		function menuchange() {
+			var mynav = document.getElementById("navbar");
+			// alert("function on")
+			if (mynav.className === "topnav") {
+				mynav.className += " responsive";
+			}
+			else {
+				mynav.className = "topnav";
+			}
+		}
+	</script>
+	<script>
+		var sliderpic1 = document.getElementById("sldpc1");
+		var sliderpic2 = document.getElementById("sldpc2");
+		var sliderpic3 = document.getElementById("sldpc3");
+
+		var slidebutton = document.getElementById("sldbtn");
+		slidebutton.addEventListener('click', slidepics, false);
+
+
+		
+
+		function slidepics() {
+			
+			if (sliderpic1.className == "slidercontent") {
+				sliderpic1.className += " hidepic"
+				sliderpic2.className = "slidercontent"}
+			else if (sliderpic2.className == "slidercontent") {
+				sliderpic2.className += " hidepic";
+				sliderpic3.className = "slidercontent"
+			}
+			else {
+				sliderpic3.className += " hidepic"
+				sliderpic1.className = "slidercontent"
+			}
+		}
 	</script>
 
 </body>

@@ -2,10 +2,138 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MeloNoid</title>
-	<link rel="stylesheet" type="text/css" href="homepagestyle.css">
+	<!-- <link rel="stylesheet" type="text/css" href="homepagestyle.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<style>
+		
+		*{
+			margin:0;
+			padding:0;
+		}
+		html {
+			/*border:3px solid red;*/
+			height:100%;
+			box-sizing:border-box;
+		}
+		body {
+			height:100%;
+			box-sizing:border-box;
+		}
+		/*header*/
+		header {
+			min-height: 50px;
+			width:100%;
+			position: fixed;
+			top:0;
+			display: flex;
+			box-shadow:0px 2px 2px #eaeaea;
+			background-color: white;
+			justify-content: space-between;
+			align-items: center;
+		}
+		
+		#noid, #noidresponsive{
+			display:inline-block;
+			font-size: 35px;
+			font-family:lucida console;
+			font-weight: 350;
+			display:flex;
+			align-items: center;
+			margin-left: 15px;
+		}
+
+		#noidresponsive {
+			margin-left: 0;
+			color: red;
+			display:none;
+		}
+		
+		#dot1, #dot2 {
+			display:inline-block;
+			transition: 0.5s;
+		}
+		
+
+		#noid, #noidresponsive {
+			padding: 5px;
+		}
+
+		#noidresponsive:hover #dot1, #noid:hover #dot1 {
+			transform: translateX(-4px);
+		}
+
+		#noidresponsive:hover #dot2, #noid:hover #dot2 {
+			transform: translateX(4px);
+		}
+		
+		.topnav {
+			font-family:lucida console;
+			font-weight: 500;
+			font-size: 20px;
+		}
+		
+		a {
+			color:black;
+			text-decoration: none;
+		}
+
+		.topnav a {
+
+			padding: 8px;
+			margin:0 5px 0 5px;
+			white-space: nowrap;
+			box-sizing: border-box;
+			border:1px solid transparent;}
+		
+		.topnav a:hover {
+			border:1px solid grey;
+			transition: 0.8s;
+		}
+		
+		.responsive {
+
+		}
+		
+		/*@media screen and (max-width: 600px) {
+			
+			#noid {
+				display:none;}
+
+			#noidresponsive{
+				display: inline;
+			}
+
+			.topnav a {display:none;}
+			
+
+			header {
+				display:flex;
+				flex-flow: column;
+				justify-content: center;
+				align-items: center;
+				}
+			
+			.topnav.responsive {
+				align-self: stretch;
+			}
+
+			.topnav.responsive a {
+				display:block;
+				text-align:center;
+			}
+
+			.navlink {
+				text-align:center;
+			}
+
+		}*/
+			
+
+
+
+	</style>
 </head>
 <body>
 	<header>
@@ -19,7 +147,6 @@
 
 				<!-- <a id="menubtn" href="#">Menu</a> -->
 			<nav class="topnav" id="navbar">
-				<a class="navlink" href="homepage.html">Home</a>
 				<a class="navlink" href="beats.html">Beats</a>
 				<a class="navlink" href="projects.html">Projekte</a>
 				<a class="navlink" href="#">Contact</a>
@@ -27,32 +154,18 @@
 		<!-- </div> -->
 	</header>
 
-
-
-
 	<div id="container">
-		<div class="project">
-
-			<div class="projectdescription">
-					<h2>Beats und Remixes</h2>
-					
-				</div>
-		<!-- 	<iframe class="projiframe" width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/191388958&amp;color=%233b3b3b&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe> -->
-
-
-			<iframe width="100%" height="850px" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/147223802&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
-
-		</div>
+		<div id="content">
+		</div>		
 	</div>
-
+	
 	<div id="socialmedia">
 		<a href="#" id="facebook" class="fa fa-facebook"></a>
 		<a href="#" id="soundcloud" class="fa fa-soundcloud"></a>
-		<a href="#" id="instagram" class="fa fa-instagram"></a>
+		<a href="" id="instagram" class="fa fa-instagram"></a>
 	</div>
 	
-	
-<script>
+	<script>
 		var noid = document.getElementById("noid");
 		var respNoid = document.getElementById("noidresponsive")
 		var noidnoid = document.getElementById("noidnoid");
